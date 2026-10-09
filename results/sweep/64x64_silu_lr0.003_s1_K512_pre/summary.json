@@ -1,0 +1,53 @@
+{
+  "config": {
+    "name": "sweep/64x64_silu_lr0.003_s1_K512_pre",
+    "seed": 0,
+    "threads": 1,
+    "hidden": [
+      64,
+      64
+    ],
+    "activation": "silu",
+    "pretrain": true,
+    "pretrain_steps": 3000,
+    "pretrain_lr": 0.003,
+    "rollout": true,
+    "rollout_schedule": [
+      [
+        32,
+        400
+      ],
+      [
+        128,
+        300
+      ],
+      [
+        512,
+        150
+      ]
+    ],
+    "rollout_batch": 256,
+    "rollout_lr": 0.003,
+    "rollout_lr_final": 0.0001,
+    "grad_clip": 1.0,
+    "finetune": false,
+    "finetune_steps": 40,
+    "finetune_lr": 0.0001,
+    "finetune_lbfgs_steps": 0
+  },
+  "n_params": 4481,
+  "history": [
+    {
+      "stage": "pretrain",
+      "seconds": 38.24464654922485,
+      "rmse_train": 0.022259575488938026,
+      "rmse_test": 0.029986485945607114
+    },
+    {
+      "stage": "rollout",
+      "seconds": 854.5580294132233,
+      "rmse_train": 0.0010479505329244003,
+      "rmse_test": 0.003405034005123982
+    }
+  ]
+}

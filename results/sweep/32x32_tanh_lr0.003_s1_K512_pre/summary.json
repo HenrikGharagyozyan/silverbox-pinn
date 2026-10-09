@@ -1,0 +1,53 @@
+{
+  "config": {
+    "name": "sweep/32x32_tanh_lr0.003_s1_K512_pre",
+    "seed": 0,
+    "threads": 1,
+    "hidden": [
+      32,
+      32
+    ],
+    "activation": "tanh",
+    "pretrain": true,
+    "pretrain_steps": 3000,
+    "pretrain_lr": 0.003,
+    "rollout": true,
+    "rollout_schedule": [
+      [
+        32,
+        400
+      ],
+      [
+        128,
+        300
+      ],
+      [
+        512,
+        150
+      ]
+    ],
+    "rollout_batch": 256,
+    "rollout_lr": 0.003,
+    "rollout_lr_final": 0.0001,
+    "grad_clip": 1.0,
+    "finetune": false,
+    "finetune_steps": 40,
+    "finetune_lr": 0.0001,
+    "finetune_lbfgs_steps": 0
+  },
+  "n_params": 1217,
+  "history": [
+    {
+      "stage": "pretrain",
+      "seconds": 32.6101655960083,
+      "rmse_train": 0.022220880227066066,
+      "rmse_test": 0.03001462594343881
+    },
+    {
+      "stage": "rollout",
+      "seconds": 528.655300617218,
+      "rmse_train": 0.0010015121014000446,
+      "rmse_test": 0.005644730185764202
+    }
+  ]
+}
