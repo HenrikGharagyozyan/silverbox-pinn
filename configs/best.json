@@ -1,0 +1,33 @@
+{
+  "name": "3x64_silu_retrain",
+  "seed": 0,
+  "threads": 1,
+  "hidden": [
+    64,
+    64,
+    64
+  ],
+  "activation": "silu",
+  "pretrain": true,
+  "pretrain_steps": 3000,
+  "pretrain_lr": 0.003,
+  "rollout": true,
+  "rollout_schedule": [
+    [
+      32,
+      800
+    ],
+    [
+      128,
+      600
+    ]
+  ],
+  "rollout_batch": 256,
+  "rollout_lr": 0.001,
+  "rollout_lr_final": 0.0001,
+  "grad_clip": 1.0,
+  "finetune": false,
+  "finetune_steps": 40,
+  "finetune_lr": 0.0001,
+  "finetune_lbfgs_steps": 0
+}
