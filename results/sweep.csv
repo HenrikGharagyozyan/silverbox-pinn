@@ -1,0 +1,17 @@
+name,phase,hidden,activation,pretrain,rollout_lr,step_scale,k_final,n_params,seconds,rmse_train_mV,rmse_test_mV
+32_tanh_lr0.003_s1_K512_pre,arch,32,tanh,True,0.003,1,512,161,368.3,1.5917,8.5999
+32_silu_lr0.003_s1_K512_pre,arch,32,silu,True,0.003,1,512,161,393.9,1.1625,3.9445
+32x32_tanh_lr0.003_s1_K512_pre,arch,32x32,tanh,True,0.003,1,512,1217,561.3,1.0015,5.6447
+32x32_silu_lr0.003_s1_K512_pre,arch,32x32,silu,True,0.003,1,512,1217,604.8,1.0656,3.4738
+64x64_tanh_lr0.003_s1_K512_pre,arch,64x64,tanh,True,0.003,1,512,4481,832.6,0.9928,4.9522
+64x64_silu_lr0.003_s1_K512_pre,arch,64x64,silu,True,0.003,1,512,4481,892.8,1.048,3.405
+64x64x64_tanh_lr0.003_s1_K512_pre,arch,64x64x64,tanh,True,0.003,1,512,8641,979.8,0.9755,7.6084
+64x64x64_silu_lr0.003_s1_K512_pre,arch,64x64x64,silu,True,0.003,1,512,8641,1028.6,0.9967,2.74
+64x64x64_silu_lr0.001_s1_K128_nopre,hparam,64x64x64,silu,False,0.001,1,128,8641,497.8,1.2261,3.8004
+64x64x64_silu_lr0.001_s1_K128_pre,hparam,64x64x64,silu,True,0.001,1,128,8641,592.9,1.0685,3.0132
+64x64x64_silu_lr0.001_s1_K512_nopre,hparam,64x64x64,silu,False,0.001,1,512,8641,1285.8,1.1423,3.794
+64x64x64_silu_lr0.001_s1_K512_pre,hparam,64x64x64,silu,True,0.001,1,512,8641,1375.8,1.0099,2.8481
+64x64x64_silu_lr0.001_s2_K128_pre,hparam,64x64x64,silu,True,0.001,2,128,8641,1067.8,1.0285,2.2733
+64x64x64_silu_lr0.001_s2_K128_nopre,hparam,64x64x64,silu,False,0.001,2,128,8641,1001.0,1.1237,3.425
+64x64x64_silu_lr0.003_s1_K128_nopre,hparam,64x64x64,silu,False,0.003,1,128,8641,503.7,1.1729,4.0407
+64x64x64_silu_lr0.003_s1_K128_pre,hparam,64x64x64,silu,True,0.003,1,128,8641,573.0,1.0574,2.8206

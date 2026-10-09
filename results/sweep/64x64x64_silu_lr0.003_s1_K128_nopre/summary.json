@@ -1,0 +1,44 @@
+{
+  "config": {
+    "name": "sweep/64x64x64_silu_lr0.003_s1_K128_nopre",
+    "seed": 0,
+    "threads": 1,
+    "hidden": [
+      64,
+      64,
+      64
+    ],
+    "activation": "silu",
+    "pretrain": false,
+    "pretrain_steps": 3000,
+    "pretrain_lr": 0.003,
+    "rollout": true,
+    "rollout_schedule": [
+      [
+        32,
+        400
+      ],
+      [
+        128,
+        300
+      ]
+    ],
+    "rollout_batch": 256,
+    "rollout_lr": 0.003,
+    "rollout_lr_final": 0.0001,
+    "grad_clip": 1.0,
+    "finetune": false,
+    "finetune_steps": 40,
+    "finetune_lr": 0.0001,
+    "finetune_lbfgs_steps": 0
+  },
+  "n_params": 8641,
+  "history": [
+    {
+      "stage": "rollout",
+      "seconds": 503.7384145259857,
+      "rmse_train": 0.0011729259531357296,
+      "rmse_test": 0.004040688371060053
+    }
+  ]
+}
